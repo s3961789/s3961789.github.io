@@ -1,0 +1,29 @@
+body {
+  padding: 40px;
+  display: flex;
+}
+h1 {
+  color: blue;
+  font-size: 30px;
+  font-style: italic;
+}
+p {
+  border: 2px solid blue;
+  width: 300px;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 0px;
+  background-color: rgb(178, 254, 228);
+}
+.all-question {
+  margin-top: 0;
+}
+.question1 {
+  padding-bottom: 10px;
+  display: inline-block;
+}
+.question2 {
+  margin-top: 30px;
+  margin-left: 20px;
+  display: inline-block;
+}
