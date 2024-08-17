@@ -26,5 +26,54 @@
     <h1 id="my-heading">This is Another heading</h1>
     <h3>this is H3</h3>
     <p class="my-class"><strong>abcd</strong> Lorem ipsum dolor sit amet</p>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#homepage">Homepage</a></li>
+          <li><a href="#section1">Section 1</a></li>
+          <li><a href="#section2">Section 2</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="homepage" class="homepage">
+        <h1>Homepage</h1>
+        <p>
+          Welcome to the homepage. Click the button below to scroll down to
+          Section 1.
+        </p>
+        <button
+          onclick="document.getElementById('section1').scrollIntoView({ behavior: 'smooth' })"
+        >
+          Go to Section 1
+        </button>
+      </section>
+
+      <section id="section1" class="section">
+        <h2>Section 1</h2>
+        <p>
+          This is Section 1. It contains some content and should be scrolled to
+          from the homepage.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+          luctus urna sed urna ultricies ac tempus justo interdum. Integer at
+          lacus vitae eros venenatis vehicula. In sit amet sapien eu magna
+          luctus tincidunt.
+        </p>
+      </section>
+
+      <section id="section2" class="section">
+        <h2>Section 2</h2>
+        <p>This is Section 2. More content goes here.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+          luctus urna sed urna ultricies ac tempus justo interdum. Integer at
+          lacus vitae eros venenatis vehicula. In sit amet sapien eu magna
+          luctus tincidunt.
+        </p>
+      </section>
+    </main>
   </body>
 </html>

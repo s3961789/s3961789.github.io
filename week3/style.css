@@ -14,3 +14,69 @@ p {
   border: 10px;
   border-color: black;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+main {
+  padding: 60px 20px 20px; /* Adjust top padding to avoid content being hidden behind the fixed header */
+}
+
+.homepage {
+  background-color: #f4f4f4;
+  padding: 50px;
+  text-align: center;
+}
+
+.homepage button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.homepage button:hover {
+  background-color: #0056b3;
+}
+
+.section {
+  background-color: #e0e0e0;
+  padding: 50px;
+  margin: 20px 0;
+}
