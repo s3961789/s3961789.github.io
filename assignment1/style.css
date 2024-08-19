@@ -6,7 +6,7 @@ body {
 
 .section {
   margin-top: 20px;
-  min-height: 200vh;
+  min-height: 50vh;
   padding: 2em;
   box-sizing: border-box;
 }
@@ -25,13 +25,30 @@ h2 {
   font-family: erica one;
   font-size: 72px;
 }
-/* sections ONE */
 
+.question {
+  background-color: rgba(255, 241, 225, 1);
+  padding: 1em;
+  min-width: 30px;
+  max-width: 600px;
+  border-radius: 30px;
+  margin-top: 20px;
+  position: relative;
+}
+.answer {
+  background-color: rgba(255, 213, 167, 1);
+  padding: 1em;
+  min-width: 30px;
+  max-width: 800px;
+  border-radius: 30px;
+  margin-top: -40px;
+  padding: 30px;
+  padding-top: 50px;
+}
+
+/* section ONE */
 #section-one {
   background-color: rgba(255, 164, 66, 1);
-}
-#section-one h1 {
-  color: rgba(255, 241, 225, 1);
 }
 
 #question-answer {
@@ -60,38 +77,91 @@ h2 {
 #question5 {
   grid-column: 3/5;
   grid-row: 3/7;
+  margin-top: 30px;
 }
 
-.question {
-  background-color: rgba(255, 241, 225, 1);
-  padding: 1em;
-  min-width: 30px;
-  max-width: 500px;
-  border-radius: 30px;
-  margin-top: 20px;
-  position: relative;
-}
-.answer {
-  background-color: rgba(255, 213, 167, 1);
-  padding: 1em;
-  min-width: 30px;
-  max-width: 800px;
-  border-radius: 30px;
-  margin-top: -40px;
-  padding: 30px;
-  padding-top: 50px;
-}
-
+/* section TWO */
 #section-two {
   background-color: rgba(22, 161, 70, 1);
 }
+
+#question-section-two {
+  background-color: rgba(236, 249, 234, 1);
+}
+
+#answer-section-two {
+  background-color: rgba(211, 239, 210, 1);
+}
+
+#question-answer-two {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+#question6 {
+  grid-column: 1/3;
+}
+#question7 {
+  grid-column: 3/6;
+}
+
+#question8 {
+  grid-column: 1/6;
+  grid-row: 2/4;
+}
+
+/* section THREE */
 #section-three {
   background-color: rgba(68, 150, 255, 1);
 }
+#question-section-three {
+  background-color: rgb(234, 247, 249);
+}
+
+#answer-section-three {
+  background-color: rgb(201, 222, 237);
+}
+
+#question-answer-three {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+#question9 {
+  grid-column: 1/3;
+  grid-row: 1/4;
+}
+
+#question10 {
+  grid-column: 3/6;
+  grid-row: 1/3;
+}
+#question11 {
+  grid-column: 3/6;
+  grid-row: 3/8;
+  margin-top: -20px;
+}
+/* section FOUR */
 #section-four {
   background-color: rgba(255, 99, 89, 1);
 }
-/* sections */
+#question-section-four {
+  background-color: rgb(249, 234, 234);
+}
+
+#answer-section-four {
+  background-color: rgb(247, 205, 205);
+}
+
+#question-answer-four {
+  display: flex;
+  gap: 20px;
+}
+/* sections FINISH HERE */
 
 .upper {
   font-family: poppins;
@@ -183,3 +253,11 @@ a {
 .card:hover {
   transform: translateY(-10px);
 }
+
+/* I decided to add buttons on the homepage to go directly to specific questions,
+I followed the color pallate from their website, to make it in one theme.
+
+Moreover, I've decided to add small trasnition when user hover on the buttons to 
+make it more interactive just as the Disney concert hall website
+
+For the font, I also try to follow their website chunky font, */
