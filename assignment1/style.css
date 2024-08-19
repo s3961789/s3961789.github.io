@@ -6,7 +6,7 @@ body {
 
 .section {
   margin-top: 20px;
-  min-height: 50vh;
+  min-height: 20vh;
   padding: 2em;
   box-sizing: border-box;
 }
