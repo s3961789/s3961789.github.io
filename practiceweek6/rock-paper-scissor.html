@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RPS Game</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button
+      onclick="
+      playGame ('rock');
+    "
+    >
+      Rock
+    </button>
+
+    <button
+      onclick="
+    playGame ('paper');
+"
+    >
+      Paper
+    </button>
+
+    <button
+      onclick="
+    playGame ('scissors');
+"
+    >
+      Scissors
+    </button>
+    <p class="js-scrore"></p>
+    <p class="js-moves-chosen"></p>
+    <p>Wins: 0, Losses: 0, Ties: 0</p>
+
+    <button
+      class="reset-score-button"
+      onclick="
+    resetScore()
+ "
+    >
+      Reset Score
+    </button>
+
+    <script>
+        let score = {
+            wins = 0,
+            losses = 0,
+            ties = 0
+        };
+
+        const savedScore =
+        document.querySelector('.js-score').innerHTML = `Wins:${score.wins}, Losses:${score.wins}, Ties:${score.ties};`
+
+
+      function playGame(playerMove) {
+        const computerMove = pickComputerMove();
+        let result = '';
+        if (playerMove === 'scissors') {
+            if (computerMove === 'rock') {
+                result = 'You lose.'}
+                else if (computerMove === 'paper') {
+                    result = 'You win.'
+                }
+                else if (computerMove === 'scissors') {
+                    result = 'Tie.'
+                }
+            }
+        }
+        function updateScoreElement() {
+        document.querySelector('.js-score').innerHTML = `
+          Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}
+        `;
+      }
+        function resetScore() {
+            score = {
+                wins: 0,
+                losses: 0,
+                ties: 0,
+            };
+        }
+    </script>
+  </body>
+</html>
