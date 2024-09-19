@@ -1,0 +1,55 @@
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+h1 {
+  font-family: Chewy;
+  font-size: 126px;
+  color: #5d69a5;
+}
+
+p {
+  font-family: Poppins;
+  font-size: large;
+  margin-top: -50px;
+  color: #5d69a5;
+}
+
+.try-button {
+  background-color: rgba(247, 179, 106, 1);
+  font-family: Poppins;
+  font-weight: 500;
+  width: 160px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 20px;
+  border-bottom: 8px solid #e4a057;
+}
+
+.try-button:hover {
+  margin-top: 8px;
+  border-bottom: 0px solid #e4a057;
+}
+
+.try-button:active {
+  background-color: #e4a057;
+}
+
+/* TIMER.HTML CODE */
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.h2 {
+  font-family: Chewy;
+  font-size: 26px;
+  color: #5d69a5;
+  text-decoration: none;
+}
