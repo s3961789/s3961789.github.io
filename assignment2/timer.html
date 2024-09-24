@@ -3,43 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="script.js" defer></script>
+
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+
     <title>Study Buddy Timer</title>
   </head>
-  <body background="images/background.png">
+  <body background="images/background.png" class="body timerpage">
+    <audio src="sounds/sound1.mp3" id="sound1" loop></audio>
     <div class="header">
       <div class="left-button">
-        <button>Change Sound</button>
-        <button>Rain Sound</button>
-        <button>Bird Sound</button>
+        <div class="button music">
+          <img src="https://img.icons8.com/windows/96/itunes-note.png"><span>Cozy Winter </span>
+    
+        </div>
+        
+        <img class="button size" id="rain-button" src="https://img.icons8.com/sf-regular-filled/100/rain.png" alt="rain icon">
+        <audio src="sounds/rain.mp3" id="rain-sound" loop></audio>
+        <img class="button size" id="bird-button"  src="https://img.icons8.com/ios-filled/100/bird.png" alt="bird icon">
+        <audio src="sounds/birds.mp3" id="bird-sound" loop></audio>
       </div>
-      <a href="index.html" class="h2">Study Buddy</a>
-      <div class="slider-container">
-        <input
-          type="range"
-          min="0"
-          max="100"
-          value="50"
-          class="slider"
-          id="volumeSlider"
-        />
-        <label for="volumeSlider">Volume</label>
+      <a href="index.html" class="h2">Study Timer</a>
+      <div class="volume">
+        <img class="button size" id="volume-down" src="images/volumelow.png" alt="volume down">
+        <img class="button size" id="volume-up" src="images/volumehigh.png" alt="volume up">
+     
       </div>
+         </div>
     </div>
+    <div class="timerbody">
+      <p id="timer">5:00</p>
+    <div class="button" id="start-button">Start</div>
+    <div class="button" id="stop-button" style="display: none">Stop</div>
+    </div>
+  
+    
   </body>
 </html>
 
-<!-- Volume Slider: https://www.w3schools.com/tags/att_input_type_range.asp
- Clock Timer: https://www.youtube.com/watch?v=x7WJEmxNlEs -->
+<!-- 
+ Clock Timer: https://www.youtube.com/watch?v=x7WJEmxNlEs 
+ it didn't work at first, and I tried to change getElementById to QuerySelector then it works
+ 
+
+References:
+background img 1:
+background img 2:
+background img 3:
+
+
+ music 1 : Happy Indie Pop by Virtuosound studio from Pixabay src:https://pixabay.com/music/pop-happy-indie-pop-130932/
+ music 2 : Music by FASSound from Pixabay src: https://pixabay.com/music/beats-lofi-study-112191/
+ music 2 : Music by Juan Sanchez from Pixabay src: https://pixabay.com/music/beats-asian-lo-fi-hip-hop-beat-02-123673/
+ Rain sound : Sound Effect by Vladislav Kim from Pixabay src:https://pixabay.com/sound-effects/rain-sound-188158/
+Birds sound : Sound Effect by Alex from Pixabay src: https://pixabay.com/sound-effects/chirping-birds-ambience-217410/
