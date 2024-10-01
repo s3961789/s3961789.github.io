@@ -1,0 +1,151 @@
+/* https://colorhunt.co/palette/1a120b3c2a21d5cea3e5e5cb */
+
+body {
+  background-color: #1a120b;
+  display: flex;
+  text-align: center;
+  margin: auto;
+  max-width: 1000px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #e5e5cb;
+  /* color: #3c2a21; */
+  font-size: 1.1rem;
+  gap: 1.5rem;
+}
+
+.outer {
+  border: 2px dashed #e5e5cb7a;
+  width: 400px;
+  min-height: 200px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  opacity: 1;
+  /* background-color: cornsilk; */
+  transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 12px;
+  border-width: 0;
+  background-color: rgb(253, 221, 135);
+  cursor: pointer;
+  transition: background-color 0.5s ease scale 0.7s ease;
+}
+
+button:hover {
+  background-color: rgb(255, 200, 2);
+  color: #9f7c00;
+  scale: 0.9;
+}
+
+.duck-fill {
+  cursor: pointer;
+  transition: fill 0.3s linear;
+  animation-name: duck-wheel;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: loop;
+}
+
+.duck-fill:hover {
+  fill: rgb(180, 216, 247);
+}
+
+#box {
+  min-width: 50px;
+  max-height: 50px;
+  color: #1a120b;
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  animation-name: color-wheel;
+  animation-duration: 5s;
+  animation-iteration-count: loop;
+}
+
+@keyframes color-wheel {
+  0% {
+    background-color: purple;
+  }
+  20% {
+    background-color: lime;
+  }
+  40% {
+    background-color: red;
+  }
+  60% {
+    background-color: blue;
+  }
+  80% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: purple;
+  }
+}
+
+@keyframes duck-wheel {
+  0% {
+    fill: purple;
+  }
+  35% {
+    fill: goldenrod;
+  }
+  75% {
+    fill: turquoise;
+  }
+  100% {
+    fill: blue;
+  }
+}
+
+.spinner {
+  border: 6px solid white;
+  border-top: 6px solid coral;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spinner 2s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.duck-icon {
+  animation: bounce 5s linear infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}

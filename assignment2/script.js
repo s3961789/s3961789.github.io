@@ -4,6 +4,8 @@ const rainSound = document.querySelector("#rain-sound");
 rainButton.addEventListener("click", toggleRainSound);
 
 rainSound.volume = 0.2;
+// I decided to reduce the sound for the rain and birds because
+// it only works as a secondary sound, and I want the main sounds to stand out
 
 function toggleRainSound() {
   if (rainSound.paused) {
@@ -39,7 +41,6 @@ let countdownActive = false;
 const timerElement = document.querySelector("#timer");
 const startButton = document.querySelector("#start-button");
 const stopButton = document.querySelector("#stop-button");
-const sound = document.querySelector("#sound1");
 
 function startCountDown() {
   if (!countdownActive) {
@@ -75,31 +76,39 @@ function updateCountDown() {
 }
 
 // CHANGE SOUND
-// const sound = [
-//   {
-//     name: "Cozy Winter",
-//     src: "sound1.mp3",
-//   },
-//   { name: "Warm Summer", src: "sound2.mp3" },
-//   { name: "Breezy Spring", src: "sound3.mp3" },
-// ];
 
-// let currentIndez = 0;
-// const musicName = document.querySelector("#music-name");
+const sounds = [
+  { name: "Cozy Winter", src: "sounds/sound1.mp3" },
+  { name: "Warm Summer", src: "sounds/sound2.mp3" },
+  { name: "Breezy Spring", src: "sounds/sound3.mp3" },
+];
 
-// const musicButton = document.querySelector("#music-button");
-// console.log(soundButton);
+let currentIndez = 0;
+const musicName = document.querySelector("#music-name");
+const musicButton = document.querySelector("#music-button");
+console.log(musicButton);
+const sound = document.querySelector("#sound");
+let musicNo = 0;
 
 // musicButton.addEventListener("click", function () {
-//   chooseMusic(0); // 0 - frist video
+//   if (musicNo < sounds.length) {
+//     chooseMusic(musicNo) // 0 - frist video
+//     musicNo++;
+//   }
 // });
 
-// function chooseMusic(no) {
-//   musicButton.src = music[no].src;
-//   musicButton.textContent = music[no].name;
-//   console.log(myVideo.src);
-//   musicButton.play();
-// }
+musicButton.addEventListener("click", function () {
+  // Use modulo to reset the musicNo back to 0 after reaching the end
+  chooseMusic(musicNo);
+  musicNo = (musicNo + 1) % sounds.length;
+});
+
+function chooseMusic(no) {
+  sound.src = sounds[no].src;
+  console.log(sound.src);
+  musicName.textContent = sounds[no].name;
+  sound.play();
+}
 
 // this function was learnt from chatgpt when I asked how to replace the start button with stop button,
 // I tried using innerHTML to change the button text when the timer is in active condition, but I wasn't able to do that
@@ -119,4 +128,4 @@ stopButton.addEventListener("click", stopCountDown);
 
 const startBtn = document.querySelector("#start-btn");
 
-// BACKGROUND SOUNG
+// BACKGROUND SOUND
