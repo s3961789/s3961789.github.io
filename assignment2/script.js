@@ -93,12 +93,12 @@ let musicNo = 0;
 // musicButton.addEventListener("click", function () {
 //   if (musicNo < sounds.length) {
 //     chooseMusic(musicNo) // 0 - frist video
-//     musicNo++;
-//   }
-// });
+//     musicNo++; }});
+
+// Instead of using the code on top I decided to use modulo
+// to reset the musicNo back to 0 after reaching the end creating a list that loop
 
 musicButton.addEventListener("click", function () {
-  // Use modulo to reset the musicNo back to 0 after reaching the end
   chooseMusic(musicNo);
   musicNo = (musicNo + 1) % sounds.length;
 });
@@ -109,10 +109,10 @@ function chooseMusic(no) {
   musicName.textContent = sounds[no].name;
   sound.play();
 }
+// I decided to add sound.play here, so that when the sound is changed, it'll immedietly be played,
+// instead of waiting to click the start and stop button to activate the sound
+// However, the sound will be stopped, when we click stop
 
-// this function was learnt from chatgpt when I asked how to replace the start button with stop button,
-// I tried using innerHTML to change the button text when the timer is in active condition, but I wasn't able to do that
-// instead, I just created a new 'stop' button, and create a toggle function
 function toggleButtons() {
   if (countdownActive) {
     startButton.style.display = "none";
@@ -128,4 +128,24 @@ stopButton.addEventListener("click", stopCountDown);
 
 const startBtn = document.querySelector("#start-btn");
 
-// BACKGROUND SOUND
+// this function was learnt from chatgpt when I asked how to replace the start button with stop button,
+// I tried using innerHTML to change the button text when the timer is in active condition, but I wasn't able to do that
+// instead, I just created a new 'stop' button, and create a toggle function
+
+// INCREASE DECREASE SOUND
+const increaseVolumeButton = document.querySelector("#volume-up");
+increaseVolumeButton.addEventListener("click", increaseVolume);
+
+const decreaseVolumeButton = document.querySelector("#volume-down");
+decreaseVolumeButton.addEventListener("click", decreaseVolume);
+
+function increaseVolume() {
+  if (sound.volume < 0.9) {
+    sound.volume += 0.1;
+  }
+}
+function decreaseVolume() {
+  if (sound.volume > 0.11) {
+    sound.volume -= 0.1;
+  }
+}
