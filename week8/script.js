@@ -107,12 +107,14 @@ const videoName = document.querySelector("#video-name");
 
 const firstBtn = document.querySelector("#first-video-btn");
 console.log(firstBtn);
+
 firstBtn.addEventListener("click", function () {
   chooseVideo(0); // 0 - frist video
 });
 
 const secondBtn = document.querySelector("#second-video-btn");
 console.log(secondBtn);
+
 secondBtn.addEventListener("click", function () {
   chooseVideo(1); // 1 - second video
 });
