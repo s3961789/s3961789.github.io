@@ -5,15 +5,23 @@ body {
 body {
   background-size: cover;
   background-repeat: no-repeat;
-  gap: 50px;
 }
 
 .homepage {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+}
+.main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  gap: 50px;
 }
 
 h1 {
@@ -66,6 +74,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .timerbody {
@@ -73,6 +82,7 @@ p {
   flex-direction: column;
   gap: 30px;
   align-items: center;
+  margin-bottom: 200px;
 }
 .header {
   display: flex;
@@ -132,4 +142,14 @@ p {
   text-align: center;
   margin: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  /* background-color: rgb(245, 250, 253); */
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -20px;
+  width: 100%;
 }
