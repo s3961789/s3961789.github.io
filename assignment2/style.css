@@ -24,6 +24,9 @@ body {
   gap: 50px;
 }
 
+/* I chose Urbanist as the font because it suits the aesthetic of my whole website, it's thin and minimalist but not too serious, 
+With the combination of rounded corner of my buttons I think this font suit best, rather than using bulky thick fonts, where it'll
+coompete with the icons */
 h1 {
   font-family: urbanist;
   font-style: italic;
@@ -56,6 +59,7 @@ p {
   margin-bottom: 10px;
 }
 
+/* I tried to creat a gamified experience through the hover transition of the button, making it more engaging for the user */
 .button:hover {
   margin-top: 8px;
   /* transform: translateY(8px); */
