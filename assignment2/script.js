@@ -33,6 +33,9 @@ function toggleBirdSound() {
   }
 }
 
+// Changing the background color of the button when clicked -> if rainSound and birdSound played is needed to give a sense of state change
+// for the user to know what actions has been made or what button activated
+
 // TIMER
 const startingMinutes = 5;
 let time = startingMinutes * 60;
@@ -74,6 +77,9 @@ function updateCountDown() {
     toggleButtons();
   }
 }
+
+//  Clock Timer: https://www.youtube.com/watch?v=x7WJEmxNlEs
+//  it didn't work at first, and I tried to change getElementById to QuerySelector then it works
 
 // CHANGE SOUND
 
@@ -149,3 +155,5 @@ function decreaseVolume() {
     sound.volume -= 0.1;
   }
 }
+
+// This was the last feature I did in this website, it was repeatedly learnt together in class
