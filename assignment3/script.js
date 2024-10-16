@@ -44,4 +44,7 @@ islands.forEach((island, indexNo) => {
   }
 });
 
-// for the hover effect I decided
+// HOVER: I found different ways to store the original images and hovered images
+// and decided to use two seperate arrays, because I'm most familiar with this methode
+// I tried using map, but there're somepart that I'm not sure why we need it, so using
+// the methode that I'm most familiar with help me to deepen my understanding on it
