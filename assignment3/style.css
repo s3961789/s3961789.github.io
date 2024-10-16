@@ -1,0 +1,230 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.homepage {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  gap: 50px;
+}
+
+/* LANDING PAGE */
+
+/* Most of the landing page was actually inspired by my assignment 2 project, 
+I just need to adjust few things, like the size, color and font style */
+
+.image-title {
+  width: 800px;
+}
+
+.explore-button {
+  background-color: rgba(237, 76, 64, 1);
+  font-family: League Spartan;
+  font-weight: 600;
+  width: 300px;
+  height: 70px;
+  color: rgba(248, 246, 242, 1);
+  padding: 18px;
+  text-decoration: none;
+  font-size: 32px;
+  cursor: pointer;
+  border-radius: 25px;
+  border-bottom: 8px solid rgba(214, 48, 36, 1);
+  transition: all 0.2s ease;
+  margin-top: -30px;
+}
+
+.explore-button:hover {
+  transform: translateY(6px);
+  border-bottom-color: transparent;
+}
+
+.explore-button:active {
+  background-color: rgba(214, 48, 36, 1);
+}
+
+p {
+  font-family: League Spartan;
+  font-weight: 300;
+  color: rgba(248, 246, 242, 1);
+  font-size: 32px;
+  margin-top: 30px;
+}
+
+/* MAP PAGE */
+
+/* I positioned the island one by one by copying the exact location from my Figma design,
+but I adjusted some of it manually based on the preview, moving it further for some island that are too close */
+
+.logo {
+  width: 220px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 800px;
+}
+.sumatra {
+  position: absolute;
+  width: 287px;
+  height: 376px;
+  left: 153px;
+  top: 265px;
+  /* bottom: 321px; */
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.kalimantan {
+  position: absolute;
+  width: 314px;
+  height: 391px;
+  left: 464px;
+  top: 174px;
+  /* bottom: 417px; */
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.sulawesi {
+  position: absolute;
+  width: 260px;
+  height: 346px;
+  left: 820px;
+  top: 320px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.riau {
+  position: absolute;
+  width: 199px;
+  height: 258px;
+  left: 1110px;
+  top: 300px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.papua {
+  position: absolute;
+  width: 290px;
+  height: 278px;
+  left: 1330px;
+  top: 410px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.jawa {
+  position: absolute;
+  width: 299px;
+  height: 122px;
+  left: 450px;
+  top: 650px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.bali {
+  position: absolute;
+  width: 69px;
+  height: 66px;
+  left: 770px;
+  top: 740px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.ntt {
+  position: absolute;
+  width: 382px;
+  height: 130px;
+  left: 855px;
+  top: 720px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* POPUP SECTION */
+.popup {
+  position: fixed;
+  width: 380px;
+  height: 514px;
+  border-radius: 20px;
+  background: #ed4c40;
+  box-shadow: 0px 3px 20px 2px rgba(0, 0, 0, 0.1);
+  top: 272px;
+  left: 390px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  display: none; /* Hide the popup initially */
+  position: absolute;
+}
+
+.lake-toba {
+  width: 324.794px;
+  height: 193px;
+  align-items: center;
+}
+
+header {
+  color: #f8f6f2;
+  font-family: "League Spartan";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.explanation {
+  color: #fefefe;
+  font-family: "League Spartan";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  padding: 30px;
+}
+
+/* buttons on pop up */
+.button {
+  width: 159px;
+  height: 47px;
+  border-radius: 20px;
+  text-align: center;
+  font-family: "League Spartan";
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.funfact {
+  background: #f8f6f2;
+  border: none;
+  color: #ed4c40;
+}
+
+.cities {
+  border-radius: 20px;
+  border: 3px solid #f8f6f2;
+  background-color: #ed4c40;
+  color: #f8f6f2;
+}
