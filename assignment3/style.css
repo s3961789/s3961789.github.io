@@ -166,7 +166,7 @@ but I adjusted some of it manually based on the preview, moving it further for s
 /* POPUP SECTION */
 .popup {
   position: fixed;
-  width: 380px;
+  width: 400px;
   height: 514px;
   border-radius: 20px;
   background: #ed4c40;
@@ -175,22 +175,35 @@ but I adjusted some of it manually based on the preview, moving it further for s
   left: 390px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  display: none; /* Hide the popup initially */
+  gap: 20px;
+  /* display: none; Hide the popup initially */
   position: absolute;
+  padding: 30px;
 }
 
-.lake-toba {
+#close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 44px;
+  color: #f8f6f2;
+  cursor: pointer;
+}
+
+#popup-image {
   width: 324.794px;
   height: 193px;
-  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header {
   color: #f8f6f2;
   font-family: "League Spartan";
   font-size: 40px;
-  font-style: normal;
+  text-align: left;
   font-weight: 700;
   line-height: normal;
 }
@@ -202,12 +215,16 @@ header {
   font-weight: 400;
   line-height: 20px;
   text-align: left;
-  padding: 30px;
 }
 
 /* buttons on pop up */
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
 .button {
-  width: 159px;
+  width: 170px;
   height: 47px;
   border-radius: 20px;
   text-align: center;
