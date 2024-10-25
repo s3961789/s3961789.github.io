@@ -34,8 +34,6 @@ for (let i = 0; i < islands.length; i++) {
   const hoverSrc = originalSrc.replace(originalImages[i], hoverImages[i]); // Hover image replacement
 
   island.addEventListener("click", islandClicked);
-  island.addEventListener("click", playClickSound);
-  console.log(island);
 
   function islandClicked() {
     if (clickedState[i] === false) {
@@ -217,54 +215,3 @@ const popupCities = [
     position: { top: "25%", left: "47%" },
   },
 ];
-
-// const citiesImages = [
-//   "images/sumatra-cities.png",
-//   "images/kalimantan-cities.png",
-//   "images/sulawesi-cities.png",
-//   "images/maluku-cities.png",
-//   "images/papua-cities.png",
-//   "images/jawa-cities.png",
-//   "images/bali-cities.png",
-//   "images/ntt-cities.png",
-// ];
-
-// // logic when .cities click popup content change, map images change
-
-// const citiesButton = document.querySelector("#cities");
-// console.log(citiesButton)
-
-// let citiesActive = new Array(islands.length).fill(false);
-
-// citiesButton.addEventListener("click", toggleCitiesImages);
-
-// function toggleCitiesImages() {
-//   citiesActive[i]= !citiesActive[i];
-
-//   for (let i = 0; i < citiesButton.length; i++) {
-//     if (citiesActive) {
-//       islands[i].src = citiesImages[i]; // Change to city image
-//     } else {
-//       islands[i].src = originalImages[i]; // back to original image
-//     }
-//   }
-// }
-
-// SOUND;
-// neutral background sound, click sound
-
-// const backgroundMusic = document.querySelector(".bg-sound");
-
-function playMusic() {
-  backgroundMusic.play();
-  backgroundMusic.loop = true;
-}
-window.onload = playMusic;
-
-const clickSound = document.querySelector(".click-sound");
-
-popup.addEventListener("click", playClickSound);
-
-function playClickSound() {
-  clickSound.play();
-}

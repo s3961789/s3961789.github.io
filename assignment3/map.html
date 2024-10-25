@@ -15,14 +15,13 @@
       rel="stylesheet"
     />
     <title>Indonesian Map</title>
+    <audio src="sounds/bg.mp3" class="bg-sound"></audio>
+    <audio src="sounds/" class="click-sound"></audio>
     <body background="images/bg-map-page.png" class="body homepage">
       <div class="map-body">
-        <img
-          src="images/logo-title.png"
-          alt="logo"
-          class="logo"
-          href="index.html"
-        />
+        <a href="index.html" class="logo"
+          ><img src="images/logo-title.png"
+        /></a>
         <!-- total 8 islands-->
         <div>
           <img
@@ -44,10 +43,10 @@
             data-id="sulawesi"
           />
           <img
-            src="images/riau.png"
-            alt="riau-island"
-            class="island riau"
-            data-id="riau"
+            src="images/maluku.png"
+            alt="maluku-island"
+            class="island maluku"
+            data-id="maluku"
           />
 
           <img
@@ -85,12 +84,17 @@
               years ago, one of the most powerful eruptions in Earth’s history
             </div>
             <div class="buttons">
-              <button class="funfact button">Fun fact</button>
-              <button class="cities button">Cities</button>
+              <!-- <button class="funfact button" id="funfacts">Fun fact</button>
+              <button class="cities button" id="cities" data-id="sumatra">
+                Cities
+              </button> -->
             </div>
           </div>
         </div>
       </div>
+      <a class="button" href="credit.html">Resources</a>
     </body>
   </head>
 </html>
+
+<!-- future challanges that may appear:  -->
