@@ -239,3 +239,14 @@ header {
   right: 10px;
   text-decoration: none;
 }
+
+h1,
+.back {
+  font-family: "League Spartan";
+  font-size: 25px;
+}
+
+h2 {
+  font-family: "League Spartan";
+  font-size: 16px;
+}
