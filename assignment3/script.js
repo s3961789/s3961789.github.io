@@ -138,7 +138,7 @@ function openPopup(id) {
   popup.style.top = data.position.top;
   popup.style.left = data.position.left;
   popup.style.display = "flex";
-  cities.setAttribute("data-id", data.header);
+  // cities.setAttribute("data-id", data.header);
   console.log(cities);
   islands.forEach((island) => {
     island.style.pointerEvents = "none";
@@ -160,104 +160,28 @@ function closePopup() {
   }
 }
 
-cities.addEventListener("click", showCities);
-
-function showCities(event) {
-  const id = cities.getAttribute("data-id");
-  console.log(id);
-}
-
-const popupCities = [
-  {
-    header: "Sumatra",
-    img: "images/lake-toba.png",
-    text: "Sumatra is home to Lake Toba, the largest volcanic lake in the world! It was formed by a supervolcanic eruption around 74,000 years ago",
-    position: { top: "22%", left: "25%" },
-  },
-  {
-    header: "Kalimantan",
-    img: "images/nusantara.png",
-    text: "Nusantara, Indonesia's new capital in East Kalimantan, means archipelago, symbolizing the unity of the nation’s diverse islands. It aims to be Southeast Asia's first carbon-neutral capital, focusing on green energy, electric vehicles, and forest preservation",
-    position: { top: "18%", left: "44%" },
-  },
-  {
-    header: "Sulawesi",
-    img: "images/toraja.png",
-    text: "In South Sulawesi, the Torajan people are popular for their funeral rituals, where funerals can span several days, featuring animal sacrifices, music, and traditional dances, with the deceased kept at home for months or years",
-    position: { top: "32%", left: "61%" },
-  },
-  {
-    header: "Maluku",
-    img: "images/spices.png",
-    text: "Maluku was once known as the Spice Islands because it was the world's only source of valuable spices like nutmeg, mace, and cloves during the 16th and 17th centuries, which sparked European wars for control of the islands",
-    position: { top: "25%", left: "38%" },
-  },
-  {
-    header: "Papua",
-    img: "images/raja-ampat.png",
-    text: "Raja Ampat, located off the northwest of Papua, is home to the world's most diverse marine life, boasting over 1,500 species of fish and 600 species of coral",
-    position: { top: "38%", left: "51%" },
-  },
-  {
-    header: "Jawa",
-    img: "images/borobudur.png",
-    text: "Candi Borobudur, located in Central Java, Indonesia, is the world's largest Buddhist temple. It was built during the 8th-9th centuries by the Sailendra Dynasty using over 2 million volcanic stone blocks",
-    position: { top: "16%", left: "25%" },
-  },
-  {
-    header: "Bali",
-    img: "images/pura-bali.png",
-    text: "Bali welcomed over 15.4 million international and domestic visitors in 2023. The island is renowned for its unique temples, traditional ceremonies, and places for relaxation and adventure",
-    position: { top: "28%", left: "35%" },
-  },
-  {
-    header: "Nusa Tenggara",
-    img: "images/komodo.png",
-    text: "Nusa Tenggara is home to the famous Komodo National Park, a UNESCO World Heritage site, which is the only place in the world where you can see the iconic Komodo dragons in their natural habitat",
-    position: { top: "25%", left: "47%" },
-  },
-];
-
-// const citiesImages = [
-//   "images/sumatra-cities.png",
-//   "images/kalimantan-cities.png",
-//   "images/sulawesi-cities.png",
-//   "images/maluku-cities.png",
-//   "images/papua-cities.png",
-//   "images/jawa-cities.png",
-//   "images/bali-cities.png",
-//   "images/ntt-cities.png",
-// ];
-
-// // logic when .cities click popup content change, map images change
-
-// const citiesButton = document.querySelector("#cities");
-// console.log(citiesButton)
-
-// let citiesActive = new Array(islands.length).fill(false);
-
-// citiesButton.addEventListener("click", toggleCitiesImages);
-
-// function toggleCitiesImages() {
-//   citiesActive[i]= !citiesActive[i];
-
-//   for (let i = 0; i < citiesButton.length; i++) {
-//     if (citiesActive) {
-//       islands[i].src = citiesImages[i]; // Change to city image
-//     } else {
-//       islands[i].src = originalImages[i]; // back to original image
-//     }
-//   }
-// }
-
 // SOUND;
-// neutral background sound, click sound
+// neutral background sound, and click sound effect
 
-// const backgroundMusic = document.querySelector(".bg-sound");
+// function playMusic() {
+//   backgroundMusic.play();
+//   backgroundMusic.loop = true;
+
+const musicButton = document.querySelector("#play");
+const backgroundMusic = document.querySelector(".bg-sound");
+
+musicButton.addEventListener("click", playMusic);
+backgroundMusic.volume = 0.4;
 
 function playMusic() {
-  backgroundMusic.play();
-  backgroundMusic.loop = true;
+  if (backgroundMusic.paused) {
+    backgroundMusic.play();
+    backgroundMusic.loop = true;
+    musicButton.src = "images/volume-on.png";
+  } else {
+    backgroundMusic.pause();
+    musicButton.src = "images/volume-off.png";
+  }
 }
 window.onload = playMusic;
 
@@ -268,3 +192,7 @@ popup.addEventListener("click", playClickSound);
 function playClickSound() {
   clickSound.play();
 }
+
+// In my opinion, sound play a crucial role in determining an engaging educative website, especially for kids.
+// in my website, I choose indonesian traditional sounds to represent the culture, and to give identity to the website
+// moreover, I also added a click sound effect to make it more interactive, work as a audio feedback that an island has been clicked

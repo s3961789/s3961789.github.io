@@ -71,7 +71,7 @@ p {
 /* MAP PAGE */
 
 /* I positioned the island one by one by copying the exact location from my Figma design,
-but I adjusted some of it manually based on the preview, moving it further for some island that are too close */
+but I adjusted some of it manually based on the browser preview, making the distance between islands even */
 
 .logo {
   width: 220px;
@@ -249,4 +249,9 @@ h1,
 h2 {
   font-family: "League Spartan";
   font-size: 16px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
 }
